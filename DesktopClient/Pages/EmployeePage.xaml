@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages.EmployeePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar ToolBarTray.IsLocked="True">
+                <Button Content="Cadastrar" />
+                <Button Content="Alterar" />
+            </ToolBar>
+        </ToolBarTray>
+
+        <ListView x:Name="EmployeeListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nome" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</UserControl>

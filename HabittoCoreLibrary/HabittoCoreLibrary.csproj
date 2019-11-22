@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>WisdomSoftware.HabittoBusinessManagement.HabittoCoreLibrary</RootNamespace>
+    <Authors>Erick Ruh Cardozo (W1SD00M)</Authors>
+    <Company>WisdomSoftware</Company>
+    <Description>The core API used by all projects of the Habitto Business Management System.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+</Project>
