@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient"
         xmlns:pages="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages"
+        xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
         mc:Ignorable="d"
-        Title="Dashboard - Habitto Gestão Empresarial"
+        Title="{x:Static properties:Resources.DashboardWindowTitle}"
         Width="800"
         Height="450"
         WindowStartupLocation="CenterScreen">
     <TabControl Margin="3,0,3,3">
-        <TabItem Header="Produtos">
+        <TabItem Header="{x:Static properties:Resources.Products}">
             <pages:ProductsPage />
+        </TabItem>
+        <TabItem Header="{x:Static properties:Resources.Employees}">
+            <pages:EmployeePage />
         </TabItem>
     </TabControl>
 </Window>

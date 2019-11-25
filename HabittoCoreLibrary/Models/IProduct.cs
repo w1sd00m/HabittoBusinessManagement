@@ -8,9 +8,6 @@ namespace WisdomSoftware.HabittoBusinessManagement.HabittoCoreLibrary.Models
 {
     public interface IProduct
     {
-        /// <summary>
-        /// The data-base ID of this Product.
-        /// </summary>
         int ID { get; }
         string Barcode { get; }
         string Name { get; }

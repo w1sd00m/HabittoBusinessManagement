@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages"
+             xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800">
@@ -11,26 +12,26 @@
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True">
-                <Button Content="Cadastrar"
+                <Button Content="{x:Static properties:Resources.Register}"
                         Click="RegisterNewProduct" />
-                <Button Content="Alterar" />
+                <Button Content="{x:Static properties:Resources.Change}" />
             </ToolBar>
         </ToolBarTray>
 
         <ListView x:Name="ProductsListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Código de Barras"
+                    <GridViewColumn Header="{x:Static properties:Resources.Barcode}"
                                     Width="130" />
-                    <GridViewColumn Header="Nome"
+                    <GridViewColumn Header="{x:Static properties:Resources.Name}"
                                     Width="130" />
-                    <GridViewColumn Header="Tipo"
+                    <GridViewColumn Header="{x:Static properties:Resources.Type}"
                                     Width="130" />
-                    <GridViewColumn Header="Subtipo"
+                    <GridViewColumn Header="{x:Static properties:Resources.Subtype}"
                                     Width="130" />
-                    <GridViewColumn Header="Tamanho"
+                    <GridViewColumn Header="{x:Static properties:Resources.Size}"
                                     Width="130" />
-                    <GridViewColumn Header="Preço"
+                    <GridViewColumn Header="{x:Static properties:Resources.Price}"
                                     Width="130" />
                 </GridView>
             </ListView.View>

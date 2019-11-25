@@ -12,10 +12,10 @@ namespace WisdomSoftware.HabittoBusinessManagement.HabittoCoreLibrary.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public DateTime Birth { get; set; }
         public Address Address { get; set; }
         public string NID { get; set; } // RG
         public string SSN { get; set; } // CPF
         public DateTime AdmissionDate { get; set; }
+        public bool IsActive { get; set; }
     }
 }

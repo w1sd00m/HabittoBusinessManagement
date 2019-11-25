@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WisdomSoftware.HabittoBusinessManagement.DesktopClient.Dialogs;
 
 namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages
 {
@@ -23,6 +24,16 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages
         public EmployeePage()
         {
             InitializeComponent();
+        }
+
+        private void RegisterEmployee(object sender, RoutedEventArgs e)
+        {
+            var dialog = new EditEmployeeDialog() { Title = "Register New Employee" };
+
+            if (dialog.ShowDialog() == true)
+            {
+
+            }
         }
     }
 }

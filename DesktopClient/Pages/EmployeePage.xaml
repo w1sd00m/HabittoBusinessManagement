@@ -4,21 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Pages"
+             xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800">
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True">
-                <Button Content="Cadastrar" />
-                <Button Content="Alterar" />
+                <Button Content="{x:Static properties:Resources.Register}"
+                        Click="RegisterEmployee"/>
+                <Button Content="{x:Static properties:Resources.Change}" />
             </ToolBar>
         </ToolBarTray>
 
         <ListView x:Name="EmployeeListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nome" />
+                    <GridViewColumn Header="{x:Static properties:Resources.Name}"
+                                    Width="130" />
+                    <GridViewColumn Header="{x:Static properties:Resources.Address}"
+                                    Width="130" />
+                    <GridViewColumn Header="{x:Static properties:Resources.NationalID}"
+                                    Width="130" />
+                    <GridViewColumn Header="{x:Static properties:Resources.SocialSecurity}"
+                                    Width="130" />
+                    <GridViewColumn Header="{x:Static properties:Resources.Admission}"
+                                    Width="130" />
                 </GridView>
             </ListView.View>
         </ListView>

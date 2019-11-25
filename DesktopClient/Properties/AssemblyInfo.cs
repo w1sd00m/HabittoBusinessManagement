@@ -7,12 +7,12 @@ using System.Windows;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("DesktopClient")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Habitto Gestão Empresarial")]
+[assembly: AssemblyDescription("Software para Gestão Empresarial criado especialmente para Loja Habitto.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DesktopClient")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("Wisdom Software")]
+[assembly: AssemblyProduct("Habitto Gestão Empresarial")]
+[assembly: AssemblyCopyright("Copyright © Wisdom Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
