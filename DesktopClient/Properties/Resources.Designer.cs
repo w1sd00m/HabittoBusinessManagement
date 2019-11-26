@@ -215,6 +215,24 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Select a City.
+        /// </summary>
+        public static string SelectACity {
+            get {
+                return ResourceManager.GetString("SelectACity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Select a State.
+        /// </summary>
+        public static string SelectAState {
+            get {
+                return ResourceManager.GetString("SelectAState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Size.
         /// </summary>
         public static string Size {

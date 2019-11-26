@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Dialogs"
         xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="{x:Static properties:Resources.Employees}"
         Width="600"
@@ -51,7 +52,8 @@
                Grid.Column="0"
                Content="{Binding Source={x:Static properties:Resources.Name}}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Row="0"
+        <TextBox x:Name="Tbx_EmployeeName"
+                 Grid.Row="0"
                  Grid.Column="1" />
 
         <!-- National ID -->
@@ -59,24 +61,27 @@
                Grid.Column="2"
                Content="{Binding Source={x:Static properties:Resources.NationalID}}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Row="0"
+        <TextBox x:Name="Tbx_NationalID"
+                 Grid.Row="0"
                  Grid.Column="3" />
-
-        <!-- Admission -->
-        <Label Grid.Row="1"
-               Grid.Column="0"
-               Content="{Binding Source={x:Static properties:Resources.Admission}}"
-               ContentStringFormat="{}{0}:" />
 
         <!-- Social Security -->
         <Label Grid.Row="1"
-               Grid.Column="2"
+               Grid.Column="0"
                Content="{Binding Source={x:Static properties:Resources.SocialSecurity}}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Row="1"
-                 Grid.Column="3" />
-        <DatePicker Grid.Row="1"
-                    Grid.Column="1"
+        <TextBox x:Name="Tbx_SocialSecurity"
+                 Grid.Row="1"
+                 Grid.Column="1" />
+
+        <!-- Admission -->
+        <Label Grid.Row="1"
+               Grid.Column="2"
+               Content="{Binding Source={x:Static properties:Resources.Admission}}"
+               ContentStringFormat="{}{0}:" />
+        <DatePicker x:Name="Dtp_AdmissionDate"
+                    Grid.Row="1"
+                    Grid.Column="3"
                     VerticalAlignment="Center"/>
 
         <!-- Address -->
@@ -98,53 +103,72 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <!-- Street -->
-                <Label Grid.Row="0"
-                       Grid.Column="0"
-                       Content="{x:Static properties:Resources.Street}"
-                       ContentStringFormat="{}{0}:" />
-                <TextBox Grid.Row="0"
-                         Grid.Column="1" />
-
-                <!-- Number -->
-                <Label Grid.Row="0"
-                       Grid.Column="2"
-                       Content="{Binding Source={x:Static properties:Resources.Number}}"
-                       ContentStringFormat="{}{0}:" />
-                <TextBox Grid.Row="0"
-                         Grid.Column="3" />
-
-                <!-- Zip Code -->
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Content="{Binding Source={x:Static properties:Resources.ZipCode}}"
-                       ContentStringFormat="{}{0}:" />
-                <TextBox Grid.Row="1"
-                         Grid.Column="1" />
-
-                <!-- Neighborhood -->
-                <Label Grid.Row="1"
-                       Grid.Column="2"
-                       Content="{Binding Source={x:Static properties:Resources.Neighborhood}}"
-                       ContentStringFormat="{}{0}:" />
-                <TextBox Grid.Row="1"
-                         Grid.Column="3" />
-
                 <!-- State -->
-                <Label Grid.Row="2"
+                <Label Grid.Row="0"
                        Grid.Column="0"
                        Content="{x:Static properties:Resources.State}"
                        ContentStringFormat="{}{0}:" />
-                <ComboBox Grid.Row="2"
-                          Grid.Column="1" />
+                <ComboBox x:Name="Cbx_State"
+                          SelectedIndex="0"
+                          IsEditable="True"
+                          Grid.Row="0"
+                          Grid.Column="1">
+                    <ComboBoxItem Content="{x:Static properties:Resources.SelectAState}"
+                                  Visibility="Hidden" />
+                </ComboBox>
 
                 <!-- City -->
-                <Label Grid.Row="2"
+                <Label Grid.Row="0"
                        Grid.Column="2"
                        Content="{x:Static properties:Resources.City}"
                        ContentStringFormat="{}{0}:" />
-                <ComboBox Grid.Row="2"
-                          Grid.Column="3" />
+                <ComboBox x:Name="Cbx_City"
+                          IsEnabled="False"
+                          IsEditable="True"
+                          SelectedIndex="0"
+                          Grid.Row="0"
+                          Grid.Column="3">
+                    <ComboBoxItem Content="{x:Static properties:Resources.SelectACity}"
+                                  Visibility="Hidden" />
+                </ComboBox>
+
+                <!-- Street -->
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Content="{x:Static properties:Resources.Street}"
+                       ContentStringFormat="{}{0}:" />
+                <TextBox x:Name="Tbx_Street"
+                         Grid.Row="1"
+                         Grid.Column="1" />
+
+                <!-- Number -->
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                       Content="{Binding Source={x:Static properties:Resources.Number}}"
+                       ContentStringFormat="{}{0}:" />
+                <xctk:IntegerUpDown Name="Ipd_Number"
+                                    Grid.Row="1"
+                                    Grid.Column="3" />
+
+                <!-- Zip Code -->
+                <Label Grid.Row="2"
+                       Grid.Column="2"
+                       Content="{Binding Source={x:Static properties:Resources.ZipCode}}"
+                       ContentStringFormat="{}{0}:" />
+                <xctk:MaskedTextBox x:Name="Tbx_ZipCode"
+                                    VerticalAlignment="Center"
+                                    Grid.Row="2"
+                                    Grid.Column="3"
+                                    Mask="000\.000\.000-00" />
+
+                <!-- Neighborhood -->
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Content="{Binding Source={x:Static properties:Resources.Neighborhood}}"
+                       ContentStringFormat="{}{0}:" />
+                <TextBox x:Name="Tbx_Neighborhood"
+                         Grid.Row="2"
+                         Grid.Column="1" />
             </Grid>
         </GroupBox>
 
@@ -156,7 +180,7 @@
                 BorderBrush="DarkGray"
                 BorderThickness="1.5"
                 Margin="5">
-            <Image Margin="5"
+            <Image x:Name="Img_Employee" Margin="5"
                    Cursor="Hand"
                    Source="/HabittoBusinessManagement;component/Assets/Images/UserAvatar.png" />
         </Border>

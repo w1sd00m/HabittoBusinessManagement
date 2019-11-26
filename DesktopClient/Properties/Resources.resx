@@ -169,6 +169,12 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="SelectACity" xml:space="preserve">
+    <value>Select a City</value>
+  </data>
+  <data name="SelectAState" xml:space="preserve">
+    <value>Select a State</value>
+  </data>
   <data name="Size" xml:space="preserve">
     <value>Size</value>
   </data>
