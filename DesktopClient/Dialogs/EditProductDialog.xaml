@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Dialogs"
         xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="{x:Static properties:Resources.Products}"
         Width="600"
@@ -49,42 +50,50 @@
                Grid.Row="0"
                Content="{x:Static properties:Resources.Barcode}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Column="1"
+        <TextBox x:Name="Tbx_Barcode"
+                 Grid.Column="1"
                  Grid.Row="0"/>
 
         <Label Grid.Column="0"
                Grid.Row="1"
                Content="{x:Static properties:Resources.Name}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Column="1"
+        <TextBox x:Name="Tbx_Name"
+                 Grid.Column="1"
                  Grid.Row="1" />
 
         <Label Grid.Column="0"
                Grid.Row="2"
                Content="{x:Static properties:Resources.Type}"
                ContentStringFormat="{}{0}:" />
-        <ComboBox Grid.Column="1"
+        <ComboBox x:Name="Cbx_Type" Grid.Column="1"
                   Grid.Row="2" />
 
         <Label Grid.Column="0"
                Grid.Row="3"
                Content="{x:Static properties:Resources.Subtype}" />
-        <ComboBox Grid.Column="1"
+        <ComboBox x:Name="Cbx_Subtype"
+                  Grid.Column="1"
                   Grid.Row="3" />
 
         <Label Grid.Column="0"
                Grid.Row="4"
                Content="{x:Static properties:Resources.Size}"
                ContentStringFormat="{}{0}:" />
-        <ComboBox Grid.Column="1"
+        <ComboBox x:Name="Cbx_Size"
+                  Grid.Column="1"
                   Grid.Row="4" />
 
         <Label Grid.Column="0"
                Grid.Row="5"
                Content="{x:Static properties:Resources.Price}"
                ContentStringFormat="{}{0}:" />
-        <TextBox Grid.Column="1"
-                 Grid.Row="5" />
+        <xctk:MaskedTextBox x:Name="Mtb_Price"
+                            VerticalAlignment="Center"
+                            HorizontalContentAlignment="Right"
+                            Grid.Column="1"
+                            Grid.Row="5" 
+                            Mask="R\$099\,99"/>
 
         <Border Grid.Column="2"
                 Grid.Row="0"

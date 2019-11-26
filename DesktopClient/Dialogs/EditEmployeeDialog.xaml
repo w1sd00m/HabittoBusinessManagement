@@ -110,11 +110,14 @@
                        ContentStringFormat="{}{0}:" />
                 <ComboBox x:Name="Cbx_State"
                           SelectedIndex="0"
+                          VerticalAlignment="Center"
                           IsEditable="True"
                           Grid.Row="0"
                           Grid.Column="1">
                     <ComboBoxItem Content="{x:Static properties:Resources.SelectAState}"
-                                  Visibility="Hidden" />
+                                  Visibility="Collapsed" />
+                    <ComboBoxItem Content="Paraná" />
+                    <ComboBoxItem Content="São Paulo" />
                 </ComboBox>
 
                 <!-- City -->
@@ -124,12 +127,13 @@
                        ContentStringFormat="{}{0}:" />
                 <ComboBox x:Name="Cbx_City"
                           IsEnabled="False"
+                          VerticalAlignment="Center"
                           IsEditable="True"
                           SelectedIndex="0"
                           Grid.Row="0"
                           Grid.Column="3">
                     <ComboBoxItem Content="{x:Static properties:Resources.SelectACity}"
-                                  Visibility="Hidden" />
+                                  Visibility="Collapsed" />
                 </ComboBox>
 
                 <!-- Street -->
@@ -147,6 +151,7 @@
                        Content="{Binding Source={x:Static properties:Resources.Number}}"
                        ContentStringFormat="{}{0}:" />
                 <xctk:IntegerUpDown Name="Ipd_Number"
+                                    VerticalAlignment="Center"
                                     Grid.Row="1"
                                     Grid.Column="3" />
 
