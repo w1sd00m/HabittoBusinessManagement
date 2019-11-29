@@ -135,11 +135,20 @@
   <data name="City" xml:space="preserve">
     <value>Cidade</value>
   </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
   <data name="DashboardWindowTitle" xml:space="preserve">
     <value>Painel de Controle - Habitto Gestão Empresarial</value>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
   <data name="Employees" xml:space="preserve">
     <value>Funcionários</value>
+  </data>
+  <data name="Include" xml:space="preserve">
+    <value>Incluir</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
@@ -156,11 +165,23 @@
   <data name="Price" xml:space="preserve">
     <value>Preço</value>
   </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produto</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Produtos</value>
   </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Cadastrar</value>
+  </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Venda</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Vendas</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>
@@ -170,6 +191,9 @@
   </data>
   <data name="SelectAState" xml:space="preserve">
     <value>Selecione um Estado</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Vendedor</value>
   </data>
   <data name="Size" xml:space="preserve">
     <value>Tamanho</value>

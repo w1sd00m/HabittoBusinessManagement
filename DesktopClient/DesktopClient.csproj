@@ -96,11 +96,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dialogs\EditSaleDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EmployeePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SalesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,11 +120,17 @@
     <Compile Include="Dialogs\EditProductDialog.xaml.cs">
       <DependentUpon>EditProductDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\EditSaleDialog.xaml.cs">
+      <DependentUpon>EditSaleDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesPage.xaml.cs">
+      <DependentUpon>SalesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

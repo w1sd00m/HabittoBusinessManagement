@@ -1,0 +1,213 @@
+﻿<Window x:Class="WisdomSoftware.HabittoBusinessManagement.DesktopClient.Dialogs.EditSaleDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Dialogs"
+        xmlns:properties="clr-namespace:WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="{x:Static properties:Resources.Sale}"
+        Width="600"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="Height">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="{x:Static properties:Resources.Seller}" 
+               ContentStringFormat="{}{0}:" />
+        <ComboBox x:Name="Cbx_Seller"
+                  VerticalAlignment="Center"
+                  Grid.Row="0"
+                  Grid.Column="1" />
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  Header="{x:Static properties:Resources.Product}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition  />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Product Barcode, Name -->
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Content="{x:Static properties:Resources.Code}" 
+                       ContentStringFormat="{}{0}:" />
+                <TextBox x:Name="Tbx_ProductBarcode"
+                         Grid.Row="0"
+                         Margin="0,0,3,0"
+                         Grid.Column="1" />
+                <TextBox x:Name="Tbx_ProductName"
+                         Margin="3,0,0,0"
+                         Grid.Row="0"
+                         Grid.Column="2" 
+                         Grid.ColumnSpan="3" />
+
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Content="{x:Static properties:Resources.Quantity}" 
+                       ContentStringFormat="{}{0}:" />
+                <xctk:IntegerUpDown Grid.Row="1"
+                                    Grid.Column="1"
+                                    VerticalAlignment="Center"
+                                    Value="0"/>
+
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                       Content="{x:Static properties:Resources.Price}"
+                       ContentStringFormat="{}{0}:" />
+                <xctk:MaskedTextBox Grid.Row="1"
+                                    Grid.Column="3"
+                                    VerticalAlignment="Center"
+                                    Mask="R\$ #00\,00" />
+                <Button Grid.Row="1"
+                        Grid.Column="4"
+                        VerticalAlignment="Center"
+                        Margin="3,0,0,0"
+                        Content="Incluir" />
+            </Grid>
+        </GroupBox>
+
+        <ListView x:Name="Ltv_Products"
+                  Grid.Row="2"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  Height="150">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="{x:Static properties:Resources.Code}" />
+                        <GridViewColumn Header="{x:Static properties:Resources.Name}" />
+                        <GridViewColumn Header="{x:Static properties:Resources.Quantity}" />
+                        <GridViewColumn Header="{x:Static properties:Resources.Price}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <GroupBox Header="Pagamento"
+                      Grid.Row="3"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Content="Método:" />
+                <ComboBox x:Name="Cbx_PaymentMethod"
+                          VerticalAlignment="Center"
+                          SelectionChanged="OnCbxPaymentMethodSelectionChanged"
+                          HorizontalAlignment="Left"
+                          Grid.Row="0"
+                          Grid.Column="1">
+                    <ComboBoxItem Content="À Vista (Dinheiro)" />
+                    <ComboBoxItem Content="Débito (Cartão | À Vista)" />
+                    <ComboBoxItem Content="Crédito (Cartão | À Vista)" />
+                    <ComboBoxItem Content="Crédito (Cartão | Parcelado)" />
+                    <ComboBoxItem Content="Crediário" />
+                </ComboBox>
+
+                <WrapPanel x:Name="Wpl_Discount"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           Visibility="Visible">
+                    <Label Content="Desconto:" />
+                    <xctk:IntegerUpDown x:Name="Ipd_Discount"
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        Value="10"
+                                        FormatString="{}{0}%"/>                    
+                </WrapPanel>
+
+                <WrapPanel x:Name="Wpl_Installments"
+                           Grid.Row="0"
+                           Grid.Column="3"
+                           Visibility="Collapsed">
+                    <Label Content="Parcelas:" />
+                    <xctk:IntegerUpDown x:Name="Ipd_Installments"
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        Value="10"/>
+                    <Label Content="Valor (R$):" />
+                    <Label x:Name="Lbl_InstallmentAmount"
+                           Content="0,00" />
+                </WrapPanel>
+
+                <WrapPanel Grid.Row="10"
+                           Grid.Column="10"
+                           HorizontalAlignment="Right">
+                    <Label Content="Total (R$):" />
+                    <Label x:Name="Lbl_Total"
+                           Content="0,00"/>
+                </WrapPanel>
+            </Grid>
+        </GroupBox>
+
+        <Grid Grid.Column="0"
+              Grid.ColumnSpan="2"
+              Grid.Row="4"
+              Margin="3,5,3,3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Content="{x:Static properties:Resources.Save}"
+                    Margin="0,0,3,0" />
+            <Button Grid.Column="1"
+                    IsCancel="True"
+                    Content="{x:Static properties:Resources.Cancel}"
+                    Margin="3,0,0,0" />
+        </Grid>
+    </Grid>
+</Window>

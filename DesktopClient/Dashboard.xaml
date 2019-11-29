@@ -18,5 +18,8 @@
         <TabItem Header="{x:Static properties:Resources.Employees}">
             <pages:EmployeePage />
         </TabItem>
+        <TabItem Header="{x:Static properties:Resources.Sales}">
+            <pages:SalesPage />
+        </TabItem>
     </TabControl>
 </Window>

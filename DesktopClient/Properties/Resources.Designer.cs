@@ -115,6 +115,15 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Code.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Dashboard - Habitto Business Management.
         /// </summary>
         public static string DashboardWindowTitle {
@@ -124,11 +133,29 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Dates.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Employees.
         /// </summary>
         public static string Employees {
             get {
                 return ResourceManager.GetString("Employees", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Include.
+        /// </summary>
+        public static string Include {
+            get {
+                return ResourceManager.GetString("Include", resourceCulture);
             }
         }
         
@@ -178,6 +205,15 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Product.
+        /// </summary>
+        public static string Product {
+            get {
+                return ResourceManager.GetString("Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap ProductIcon {
@@ -197,11 +233,38 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Quantity.
+        /// </summary>
+        public static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Register.
         /// </summary>
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Sale.
+        /// </summary>
+        public static string Sale {
+            get {
+                return ResourceManager.GetString("Sale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Sales.
+        /// </summary>
+        public static string Sales {
+            get {
+                return ResourceManager.GetString("Sales", resourceCulture);
             }
         }
         
@@ -229,6 +292,15 @@ namespace WisdomSoftware.HabittoBusinessManagement.DesktopClient.Properties {
         public static string SelectAState {
             get {
                 return ResourceManager.GetString("SelectAState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Seller.
+        /// </summary>
+        public static string Seller {
+            get {
+                return ResourceManager.GetString("Seller", resourceCulture);
             }
         }
         

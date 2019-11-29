@@ -90,7 +90,6 @@
                ContentStringFormat="{}{0}:" />
         <xctk:MaskedTextBox x:Name="Mtb_Price"
                             VerticalAlignment="Center"
-                            HorizontalContentAlignment="Right"
                             Grid.Column="1"
                             Grid.Row="5" 
                             Mask="R\$099\,99"/>
